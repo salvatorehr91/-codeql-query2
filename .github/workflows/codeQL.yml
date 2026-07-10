@@ -5,14 +5,12 @@ on:
     branches: [main]
 
 jobs:
-  CodeQL-Build:
+  build:
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
     permissions:
       # required for all workflows
